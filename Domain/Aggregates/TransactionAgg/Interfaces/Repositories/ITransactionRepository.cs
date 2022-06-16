@@ -6,5 +6,6 @@ namespace Domain.Aggregates.TransactionAgg.Interfaces.Repositories
     {
         Task Save(Transaction transaction);
         Task<IEnumerable<Transaction>> GetAll();
+        Task<Transaction> GetFirstTransaction();
     }
 }

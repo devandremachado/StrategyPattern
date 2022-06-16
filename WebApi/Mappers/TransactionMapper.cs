@@ -29,8 +29,8 @@ namespace WebApi.Mappers
             var response = new CreateCardRequestDTO()
             {
                 Number = request.Number,
-                Name = request.Name,
-                ExpirationDate = request.ExpirationDate,
+                HolderName = request.Name,
+                ExpDate = request.ExpirationDate,
                 Cvv = request.Cvv
             };
 

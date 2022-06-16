@@ -4,7 +4,7 @@ namespace Domain.Aggregates.TransactionAgg.Entities
 {
     public class DebitCardTransaction : Transaction
     {
-        public DebitCardTransaction(Card card, decimal amount, string description) : base(amount, description)
+        public DebitCardTransaction(Card card, decimal amount, string description, string transactionType) : base(amount, description, transactionType)
         {
             Card = card;
         }

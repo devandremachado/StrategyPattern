@@ -1,4 +1,6 @@
 using Domain.Aggregates.PayableAgg.Repositories;
+using Domain.Aggregates.TransactionAgg.Factories;
+using Domain.Aggregates.TransactionAgg.Interfaces.Factories;
 using Domain.Aggregates.TransactionAgg.Interfaces.Repositories;
 using Domain.Aggregates.TransactionAgg.Interfaces.Services;
 using Domain.Services;
@@ -11,6 +13,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 builder.Services.AddScoped<ITransactionService, TransactionService>();
+
+builder.Services.AddSingleton<ITransactionStrategyFactory, TransactionStrategyFactory>();
+
 builder.Services.AddSingleton<ITransactionRepository, TransactionRepository>();
 builder.Services.AddSingleton<IPayableRepository, PayableRepository>();
 

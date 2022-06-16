@@ -7,5 +7,6 @@ namespace Domain.Aggregates.TransactionAgg.Interfaces.Services
     {
         Task<Transaction> CreateTransaction(CreateTransactionRequestDTO request);
         Task<IEnumerable<Transaction>> GetAllTransactions();
+        Task<Transaction> GetFirstTransaction();
     }
 }

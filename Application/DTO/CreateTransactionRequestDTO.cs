@@ -11,8 +11,8 @@
     public class CreateCardRequestDTO
     {
         public string Number { get; set; }
-        public string Name { get; set; }
-        public DateTime ExpirationDate { get; set; }
+        public string HolderName { get; set; }
+        public DateTime ExpDate { get; set; }
         public string Cvv { get; set; }
     }
 }

@@ -25,10 +25,21 @@ namespace WebApi.Controllers
             return Ok(response);
         }
 
+        [Route("all-transactions")]
         [HttpGet]
         public async Task<IActionResult> GetAllTransactions()
         {
             var response = await _transactionService.GetAllTransactions();
+
+            return Ok(response);
+        }
+
+        [Route("first-transaction")]
+        [HttpGet]
+        public async Task<IActionResult> GetFirstTransaction()
+        {
+            var response = await _transactionService.GetFirstTransaction();
+
             return Ok(response);
         }
     }

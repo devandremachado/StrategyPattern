@@ -23,5 +23,11 @@ namespace Infra.Data.Repositories
             await Task.CompletedTask;
             return _transactions.ToList();
         }
+
+        public async Task<Transaction> GetFirstTransaction()
+        {
+            await Task.CompletedTask;
+            return _transactions.FirstOrDefault();
+        }
     }
 }
